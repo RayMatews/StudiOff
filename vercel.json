@@ -1,9 +1,9 @@
 {
   "outputDirectory": "web",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ],
   "headers": [
