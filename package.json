@@ -1,0 +1,11 @@
+{
+  "name": "studioff",
+  "version": "1.0.0",
+  "description": "StudiOff - Audio generation platform",
+  "scripts": {
+    "build": "flutter build web --release",
+    "vercel-build": "flutter build web --release"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

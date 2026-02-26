@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "StudiOff (Demo Mode)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "-d",
+        "chrome",
+        "--dart-define=DEMO_MODE=true"
+      ]
+    },
+    {
+      "name": "StudiOff (Chrome)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "-d",
+        "chrome",
+        "--dart-define=SUPABASE_URL=${env:SUPABASE_URL}",
+        "--dart-define=SUPABASE_ANON_KEY=${env:SUPABASE_ANON_KEY}",
+        "--dart-define=STRIPE_PUBLISHABLE_KEY=${env:STRIPE_PUBLISHABLE_KEY}"
+      ]
+    },
+    {
+      "name": "StudiOff (Chrome - Dev)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "-d",
+        "chrome",
+        "--dart-define=SUPABASE_URL=https://YOUR_PROJECT_ID.supabase.co",
+        "--dart-define=SUPABASE_ANON_KEY=YOUR_ANON_KEY_HERE",
+        "--dart-define=STRIPE_PUBLISHABLE_KEY=pk_test_YOUR_KEY"
+      ]
+    },
+    {
+      "name": "StudiOff (Debug)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    }
+  ]
+}

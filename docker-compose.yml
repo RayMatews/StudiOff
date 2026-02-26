@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  supabase:
+    image: supabase/local-dev:latest
+    ports:
+      - "54323:54323"
+      - "5432:5432"
+    environment:
+      SUPABASE_URL: ${SUPABASE_URL}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+    volumes:
+      - ./supabase:/supabase
+
+  flutter_web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "8080:80"
+    depends_on:
+      - supabase
+
+  edge_functions:
+    build:
+      context: ./supabase/functions
+      dockerfile: Dockerfile.edge
+    ports:
+      - "3000:3000"
+    depends_on:
+      - supabase
