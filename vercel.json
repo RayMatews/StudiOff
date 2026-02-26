@@ -1,6 +1,5 @@
 {
-  "outputDirectory": "build/web",
-  "framework": "static",
+  "outputDirectory": "web",
   "routes": [
     {
       "src": "/(.*)",
