@@ -1,0 +1,59 @@
+# Ignore everything except the Flutter build output
+*
+
+# But keep these specific files
+!vercel.json
+
+# Only include the build/web directory
+!build/
+!build/web/
+!build/web/**
+
+# Include root config files
+!pubspec.yaml
+!package.json
+
+# Ignore heavy directories
+.git/
+.github/
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+test/
+doc/
+supabase/
+lib/
+models/
+providers/
+services/
+
+# Ignore build artifacts (except web)
+build/
+.dart_tool/
+.pub/
+.pub-cache/
+coverage/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# Environment files
+.env
+.env.local
+.env.*.local
